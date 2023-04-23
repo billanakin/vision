@@ -9,10 +9,10 @@ def perform():
 
     image_path = "/home/anakinz/Vision/tmp/captured_image.jpg"
 
-    say("Please wait while I am capturing what I see.")
+    say("Capturing...")
     capture_image(image_path)
 
-    say("Please wait while I am classifying what I see.")
+    say("Classifying...")
     classifications = classify_image(image_path)
     if classifications:
         top_classification = classifications[0]
@@ -22,10 +22,10 @@ def perform():
         time.sleep(1)
         say(f"I repeat, I see {description}.")
     else:
-        say("I cannot classify I see.")
+        say("Sorry, not able to classify.")
 
 def loop():
-    say("Welcome to the alpha version of Vision.")
+    say("Welcome to Vision.")
     while True:
         try:
             perform()
